@@ -93,6 +93,9 @@ All R code is inserted between two gray bars called a code chunk. You can insert
 
 ## Knit
 In order to make the html file, you need to "Knit" the file. Knitting just means build the file. If you click "Knit" now, it will knit the lab.  
+```{r}
+
+```
 
 ## Practice
 1. Test out the arithmetic capabilities of R; experiment by doing addition, subtraction, multiplication, and division.  
