@@ -5,7 +5,7 @@ output:
   html_document:
     theme: spacelab
     toc: yes
-    toc_float: yes
+    tooat: yes
 ---
 
 ```{r setup, include = FALSE}

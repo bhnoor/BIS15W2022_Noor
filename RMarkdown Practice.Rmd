@@ -2,6 +2,7 @@
 title: "RMarkdown Practice"
 author: "Banna Noor"
 date: "1/5/2022"
+Course: "Data Science for Biology" 
 output: html_document
 ---
 
