@@ -10,5 +10,16 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+[Email](bhnoor@ucdavis.edu)
+[Random Test Link](https://jmledford3115.github.io/datascibiol/lab1_2.html)
 
+
+```{r}
+#install.packages("tidyverse")
+library("tidyverse")
+```
+```{r}
+ggplot(mtcars, aes(x = factor(cyl))) +
+    geom_bar()
+```
 
