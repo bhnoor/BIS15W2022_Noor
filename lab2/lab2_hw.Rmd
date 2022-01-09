@@ -1,6 +1,6 @@
 ---
 title: "Lab 2 Homework"
-author: "Please Add Your Name Here"
+author: "Banna Noor"
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -14,9 +14,9 @@ Answer the following questions and complete the exercises in RMarkdown. Please e
 Make sure to use the formatting conventions of RMarkdown to make your report neat and clean!  
 
 1. What is a vector in R?  
-
+##A Vector is a tool we use to organize data in R.
 2. What is a data matrix in R?  
-
+##Data Matrices are a series of stacked vectors, which can be compared to a table consisting of data 
 3. Below are data collected by three scientists (Jill, Steve, Susan in order) measuring temperatures of eight hot springs. Run this code chunk to create the vectors.  
 ```{r}
 spring_1 <- c(36.25, 35.40, 35.30)
@@ -30,18 +30,92 @@ spring_8 <- c(36.80, 36.45, 33.15)
 ```
 
 4. Build a data matrix that has the springs as rows and the columns as scientists.  
+ 
+```{r}
+springs <- c(spring_1, spring_2, spring_3, spring_4, spring_5, spring_6, spring_7, spring_8)
+springs
+```
+
+```{r}
+mes_temp_matrix <- matrix(springs, nrow = 8, byrow = T)
+mes_temp_matrix
+```
+
+```{r}
+region <- c("Jill","Steve","Susan")
+region
+```
+
 
 5. The names of the springs are 1.Bluebell Spring, 2.Opal Spring, 3.Riverside Spring, 4.Too Hot Spring, 5.Mystery Spring, 6.Emerald Spring, 7.Black Spring, 8.Pearl Spring. Name the rows and columns in the data matrix. Start by making two new vectors with the names, then use `colnames()` and `rownames()` to name the columns and rows.
 
+```{r}
+titles <- c("Bluebell Spring","Opal Spring","Riverside Spring","Too Hot Spring","Mystery Spring","Emerald Spring","Black Spring","Pearl Spring")
+titles
+```
+
+#Naming The Column 
+```{r}
+colnames(mes_temp_matrix) <- region
+```
+#Naming The Rows 
+```{r}
+rownames(mes_temp_matrix) <- titles
+```
+
+#Print 
+```{r}
+mes_temp_matrix
+```
+
+
 6. Calculate the mean temperature of all eight springs.
+```{r}
+Bluebell_Spring <- spring_1
+Opal_Spring <- spring_2
+Riverside_Spring <- spring_3
+Too_Hot_Spring <- spring_4
+Mystery_Spring <- spring_5
+Emerald_Spring <- spring_6
+Black_Spring <- spring_7
+Pearl_Spring <- spring_8
+
+
+mean(Bluebell_Spring)
+mean(Opal_Spring)
+mean(Riverside_Spring)
+mean(Too_Hot_Spring)
+mean(Mystery_Spring)
+mean(Emerald_Spring)
+mean(Black_Spring)
+mean(Pearl_Spring)
+```
 
 7. Add this as a new column in the data matrix.  
+```{r}
+Means <- c(35.65, 34.61667,29.85, 39.46667, 30.85, 30.2, 32.73333, 35.4667)
+
+
+final_mes_temp_matrix <- cbind(mes_temp_matrix, Means)
+final_mes_temp_matrix
+```
 
 8. Show Susan's value for Opal Spring only.
+```{r}
+mes_temp_matrix[2,3]
+```
 
 9. Calculate the mean for Jill's column only.  
+```{r}
+Jill_Mean <- mes_temp_matrix[,1]
+mean(mes_temp_matrix[,1])
+```
 
 10. Use the data matrix to perform one calculation or operation of your interest.
+```{r}
+mean(mes_temp_matrix[1,3])
+```
+
 
 ## Push your final code to GitHub!
 Please be sure that you check the `keep md` file in the knit preferences.  

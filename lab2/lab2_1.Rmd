@@ -1,6 +1,7 @@
 ---
 title: "Objects, Classes & NAs"
-date: "`r Sys.Date()`"
+date: "01/06/2022"
+author: "Banna Noor"
 output:
   html_document:
     theme: spacelab
@@ -39,6 +40,9 @@ To print the object to the screen, just type x.
 ```{r}
 x
 ```
+```{r}
+x 
+```
 
 Once an object has been created, you can do things with them.  
 ```{r}
@@ -63,17 +67,19 @@ We get an error here because `else` is a function in R. You also don't want to g
 ## Practice
 1. Create three new objects, `venom_GT`, `chiron`, and `veyron`. These are the fastest cars in the world. Assign each car to its top speed. The venom_GT can go 270, chiron is 261, and veyron is 268.
 ```{r}
-
+venom_GT <- 270
+chiron <- 261
+veyron <- 268
 ```
 
 2. Use arithmetic to calculate the mean top speed for the cars.
 ```{r}
-
+270 + 261 + 268 / 3
 ```
 
 3. Use the function `mean()` to calculate the mean top speed for the cars.
 ```{r}
-
+mean (c(venom_GT, chiron, veyron))
 ```
 
 ## Types of Data
