@@ -1,6 +1,7 @@
 ---
 title: "Transforming data 1: Dplyr `select()`"
 date: "`r Sys.Date()`"
+author: "Banna Noor"
 output:
   html_document:
     theme: spacelab
@@ -142,12 +143,13 @@ mammals <- readr::read_csv("data/mammal_lifehistories_v2.csv")
 
 1. Use one or more of your favorite functions to assess the structure of the data.  
 ```{r}
-
+str(mammals)
 ```
 
 2. Are there any NAs? Are you sure? Try taking an average of `max. life` as a test.  
 ```{r}
-
+anyNA(mammals)
+mean(max.life)
 ```
 
 3. What are the names of the columns in the `mammals` data?
